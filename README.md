@@ -106,6 +106,7 @@ Some ideas for features/enhancements that I will try and implement.
 
 ### Like what you see?
 
+[![Donate via PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=U4T93T9ZJNHM6)
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=dburr&url=https://github.com/dburr/twitter_adn_mirror&title=twitter_adn_mirror&language=python&tags=github&category=software)
 
 ### License
