@@ -8,15 +8,20 @@
 This script allows you to crosspost your [Twitter][TWITTER] posts ("tweets")
 to the new up-and-coming social network/app platform [App.net][APPDOTNET].
 It was created because I wanted a quick and simple way to share content
-to both services (I simply don't have [over 9,000 hours in the day][OVER9000]
+to both services (I simply don't have [over 9,000][OVER9000] hours in the day
 to manage all these social networks, nor do I have the patience to do so).
 
 In the past this task could be easily accomplished using a nifty service
 called [If This Then That (IFTTT)][IFTTT].  However recently Twitter has
-[blocked IFTTT access][TWITTER_BLOCKS_IFTTT] to the Twitter API, which
-meant this method would no longer work.
+[blocked IFTTT access][TWITTER-BLOCKS-IFTTT] to the Twitter API, which
+meant this method would no longer work.  I was able to find [a different
+method][TWITTER-RSS] of piping Twitter data into IFTTT.  Unfortunately this
+method had two downsides: all posts to App.net were prefixed with your
+Twitter username, and also @mentions and retweets were carried over as
+well.  But it worked well enough for my purposes.  Unfortunately, shortly
+after I discovered it, Twitter [deprecated][TWITTER-RSS-DEPRECATED] their
+RSS support, rendering this method non-functional as well.
 
-[ff][TWITTER-RSS]
 
 
 ### Prerequisites
@@ -29,6 +34,11 @@ pages for instructions on how to do so.
 * [Python-Twitter][PYTHON-TWITTER]
 * [Python App.net API Wrapper][PYTHON-APPDOTNET]
 * [SimpleJSON][SIMPLEJSON]
+
+You will also need to set up Developer Accounts with both [Twitter][TWITTERDEV]
+and [App.net][APPDOTNETDEV].  In the case of Twitter, this is free; however
+with App.net you will need to pay for a developer account, which costs
+$100/year.
 
 ### Setup
 
@@ -52,9 +62,10 @@ Some ideas for features/enhancements that I will try and implement.
 [APPDOTNETDEV]: https://account.app.net/developer/apps/ "App.net Developer Area"
 [OVER9000]: http://www.youtube.com/watch?v=SQYakKz3i6E "It's Over 9000"
 [IFTTT]: http://ifttt.com/ "If This Then That"
-[TWITTER_BLOCKS_IFTTT]: http://techcrunch.com/2012/09/20/ifttt-is-the-latest-service-to-be-affected-by-twitters-api-constraints-will-remove-triggers/ "IFTTT removes Twitter triggers"
+[TWITTER-BLOCKS-IFTTT]: http://techcrunch.com/2012/09/20/ifttt-is-the-latest-service-to-be-affected-by-twitters-api-constraints-will-remove-triggers/ "IFTTT removes Twitter triggers"
 [PYTHON-TWITTER]: https://github.com/bear/python-twitter "Python-Twitter"
 [PYTHON-APPDOTNET]: https://github.com/simondlr/Python-App.net-API-Wrapper "Python App.net API Wrapper"
 [TWITTER-RSS]: http://donaldburr.com/2012/09/27/two-ways-to-work-around-ifttts-removal-of-twitter-triggers/ "Twitter RSS triggers"
 [PYTHON]: http://www.python.org "Python"
 [SIMPLEJSON]: https://github.com/simplejson/simplejson "SimpleJSON"
+[TWITTER-RSS-DEPRECATED]: https://dev.twitter.com/docs/deprecations/spring-2012 "Twitter RSS deprecated"
