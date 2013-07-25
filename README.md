@@ -1,8 +1,6 @@
 # Twitter to App.net Crossposter
 ##### by Donald Burr <dburr@borg-cube.com>
 
-**Note this readme is still a work in progress**
-
 ### Purpose
 
 This script allows you to crosspost your [Twitter][TWITTER] posts ("tweets")
@@ -46,8 +44,52 @@ such as [screen][SCREEN] or [tmux][TMUX].
 
 ### Setup
 
-Once those are installed, take a look at config.sample, copy it and
-edit, then get your Twitter and App.net API keys.
+First, install the above prerequisites.  To test if everything is
+configured properly, run
+
+`python mirror.py --help`
+
+You should see a help message (and, more importantly, no error
+or warning messages).
+
+Next, head over to the [Twitter developer center][TWITTERDEV], and
+sign in with your Twitter credentials.  At the upper right of the
+screen should be your user pic; click on it and a pulldown menu
+will appear.  Choose "My Applications," then click "Create a new
+application."  Fill in the requested information (you can use any
+URLs for both the Website and Callback URL).  Once the app has been
+created, look under "OAuth Settings" and make a note of your "Consumer
+Key" and "Consumer Secret."  On the same page, look for the "Your
+access token" section, and click "Create my access token."  Wait a few
+minutes then refresh the page.  You should now see an "Access token"
+and "Access token secret" appear; note down those values as well.
+  
+Now head on over to the [App.net Developer Center][ADNDEV] and create
+a new app.  Again, you can fill in anything for Website and Callback
+URL.  Once the app is created, scroll down to the "OAuth 2 Settings"
+section and make a note of the "Client ID" and "Client Secret."
+Scroll down to the "App Settings" section, and click the "Generate a
+user token for yourself" link.  When asked for the scope, make sure
+"write post" is checked.  Make a note of the token code that has been
+generated for you.
+
+Now make a copy of `config.sample`, open it in your favorite text editor,
+and fill in the requested values.
+
+Finally, run the script with:
+
+`python mirror.py -c *config-file*`
+
+```
+Usage: mirror [-c | --config=configuration file (default: `mirror.cfg')]
+              [-i | --poll-interval=period in secs between polls (default=300)
+              [-m | --mirror-mentions]
+              [-d | --mirror-indirect-mentions]
+              [-r | --mirror-retweets]
+              [-u | --user-to-mirror=username to mirror]
+              [-n | --simulation-mode]
+```
+
 
 ### Future Plans
 
