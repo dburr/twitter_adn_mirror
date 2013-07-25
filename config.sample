@@ -1,4 +1,5 @@
 # Twitter to App.net Crossposter
+# twitter_adn_mirror Version 1.0, released 07/25/2013
 # Copyright (c) 2013 Donald Burr
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,12 +23,14 @@
 # Twitter credentials
 # Set up a new application at https://dev.twitter.com/ and fill in the
 # credentials that you are given here.  See README for detailed instructions.
+# Also, set user_to_mirror to your Twitter username (or the username whose
+# posts you want to mirror).
 [twitter]
 consumer_key = YOUR-TWITTER-CONSUMER-KEY
 consumer_secret = YOUR-TWITTER-CONSUMER-SECRET
 access_token_key = YOUR-TWITTER-ACCESS-TOKEN-KEY
 access_token_secret = YOUR-TWITTER-ACCESS-TOKEN-SECRET
-user_to_mirror = YOUR-TWITTER-USERNAME    # whose posts you want to mirror
+user_to_mirror = YOUR-TWITTER-USERNAME
 
 # App.net credentials
 # Set up a new application at https://account.app.net/developer/apps/ and
@@ -42,6 +45,7 @@ access_token = YOUR-APP.NET-USER-TOKEN
 # Other options
 #
 # Note:
+# poll_interval is in seconds (defaults to 600 seconds = 10 minutes)
 # "Mentions" are tweets where a person is @mentioned at the start of the
 # tweet.
 # Example: "@dburr Sounds great, how about dinner at 6 at The Rib Shack?" 
@@ -49,7 +53,7 @@ access_token = YOUR-APP.NET-USER-TOKEN
 # does not appear at the start of the tweet.
 # Example: "Had a great lunch with @dburr at the Pizza Palace."
 [other]
-poll_interval = 600             # how often to check for new posts, in seconds
+poll_interval = 600
 mirror_mentions = True
 mirror_indirect_mentions = True
 mirror_retweets = True

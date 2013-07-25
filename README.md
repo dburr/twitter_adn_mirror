@@ -1,4 +1,5 @@
 # Twitter to App.net Crossposter
+##### Version 1.0
 ##### by Donald Burr <dburr@borg-cube.com>
 
 ### Purpose
@@ -20,7 +21,9 @@ well.  But it worked well enough for my purposes.  Unfortunately, shortly
 after I discovered it, Twitter [deprecated][TWITTER-RSS-DEPRECATED] their
 RSS support, rendering this method non-functional as well.
 
-
+My latest solution to this problem is this script, which directly calls
+the Twitter API to read a user's posts.  As such it requires you to set up
+developer accounts with both Twitter and App.net.
 
 ### Prerequisites
 
@@ -90,6 +93,7 @@ Usage: mirror [-c | --config=configuration file (default: `mirror.cfg')]
               [-r | --mirror-retweets]
               [-u | --user-to-mirror=username to mirror]
               [-n | --simulation-mode]
+              [-v | --version]
 ```
 
 Note that if an option is specified both in the configuration file as well
@@ -103,8 +107,8 @@ Some ideas for features/enhancements that I will try and implement.
   an account on App.net
 * Mechanism to filter posts, that is, to prevent crossposting of posts
   that match certain criteria (regexp, client name, etc.)  This can be
-  used to, e.g. not crosspost auto-posts from checkin services
-  (e.g. Foursquare).
+  used, for example, to prevent crossposting of automatically generated
+  tweets (from services such as Foursquare, GetGlue, etc.).
 
 If you have any ideas for additinoal features or enhancements,
 please feel free to [open an issue on Github][GHISSUES].
@@ -112,6 +116,18 @@ Or better yet, [fork this repo][GHFORK], add the feature/make the change,
 and submit a pull request.
 
 ### About the Author
+
+I'm a software engineer-for-hire living and working in the Santa Barbara,
+California area.  I develop in many languages and have published a few apps
+in the [iOS App Store][DBURRAPPS] (and soon hopefully the Mac App Store
+and Google Play as well).
+
+Find out more about me and read my technological musings over at
+[my blog][DBURR].
+
+I also run a podcast dedicated to Japanese animation (anime) as well as
+other facets of Japanese pop culture, food, travel, and more.  You can
+find that over at [Otaku no Podcast][OTAKU].
 
 ### Like what you see?
 
@@ -143,3 +159,6 @@ This work is licensed under the [MIT License](LICENSE).
 [TMUX]: http://tmux.sourceforge.net "tmux"
 [GHISSUES]: https://github.com/dburr/twitter_adn_mirror/issues "Github Issues"
 [GHFORK]: https://help.github.com/articles/fork-a-repo "Fork"
+[DBURR]: http://DonaldBurr.com/ "Donald Burr"
+[OTAKU]: http://otakunopodcast.com/ "Otaku no Podcast"
+[DBURRAPPS]: http://DonaldBurr.com/apps/ "Donald Burr's Apps"

@@ -8,11 +8,13 @@ Usage: mirror [-c | --config=configuration file (default: `mirror.cfg')]
               [-r | --mirror-retweets]
               [-u | --user-to-mirror=username to mirror]
               [-n | --simulation-mode]
+              [-v | --version]
 
 Note: command-line arguments take precedence, followed by config files.
 """
 
 # Twitter to App.net Crossposter
+# twitter_adn_mirror Version 1.0, released 07/25/2013
 # Copyright (c) 2013 Donald Burr
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,6 +48,7 @@ import getopt
 from ConfigParser import SafeConfigParser
 from appdotnet import *
 
+version_string = "twitter_adn_mirror Version 1.0, released 07/25/2013"
 config_file = "mirror.cfg"
 poll_interval = 300
 last_run_time = time.time()
@@ -336,6 +339,7 @@ def run(sc):
 
 def main(argv=None):
   # set default poll interval here
+  global version_string
   global poll_interval
   global mirror_mentions
   global mirror_indirect_mentions
@@ -353,13 +357,16 @@ def main(argv=None):
   # parse command line options
   try:
     try:
-      opts, args = getopt.getopt(argv[1:], "hc:i:mrdn", ["help", "config=", "poll-interval=", "mirror-mentions", "mirror-indirect-mentions", "mirror-retweets", "simulation-mode"])
+      opts, args = getopt.getopt(argv[1:], "hc:i:mrdnv", ["help", "config=", "poll-interval=", "mirror-mentions", "mirror-indirect-mentions", "mirror-retweets", "simulation-mode", "version"])
     except getopt.error, msg:
       raise Usage(msg)
 
     for o, a in opts:
       if o in ("-h", "--help"):
         print __doc__
+        return 0
+      elif o in ("-v", "--version"):
+        print version_string
         return 0
       elif o in ("-i", "--poll-interval"):
         override_poll_interval = int(a)
