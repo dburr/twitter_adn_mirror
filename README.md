@@ -7,8 +7,8 @@
 This script allows you to crosspost your [Twitter][TWITTER] posts ("tweets")
 to the new up-and-coming social network/app platform [App.net][APPDOTNET].
 It was created because I wanted a quick and simple way to share content
-to both services (I simply don't have [over 9,000][OVER9000] hours in the day
-to manage all these social networks, nor do I have the patience to do so).
+to both services.  I simply don't have [over 9,000][OVER9000] hours in the day
+to manage all these social networks, nor do I have the patience to do so.
 
 In the past this task could be easily accomplished using a nifty service
 called [If This Then That (IFTTT)][IFTTT].  However recently Twitter has
@@ -67,7 +67,7 @@ access token" section, and click "Create my access token."  Wait a few
 minutes then refresh the page.  You should now see an "Access token"
 and "Access token secret" appear; note down those values as well.
   
-Now head on over to the [App.net Developer Center][ADNDEV] and create
+Now head on over to the [App.net Developer Center][APPDOTNETDEV] and create
 a new app.  Again, you can fill in anything for Website and Callback
 URL.  Once the app is created, scroll down to the "OAuth 2 Settings"
 section and make a note of the "Client ID" and "Client Secret."
