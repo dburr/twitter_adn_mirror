@@ -56,6 +56,11 @@ Some ideas for features/enhancements that I will try and implement.
   used to, e.g. not crosspost auto-posts from checkin services
   (e.g. Foursquare).
 
+
+### License
+
+This work is licensed under the [MIT License](LICENSE).
+
 [TWITTER]: http://twitter.com "Twitter"
 [TWITTERDEV]: https://dev.twitter.com "Twitter Developer"
 [APPDOTNET]: https://alpha.app.net "App.net"
