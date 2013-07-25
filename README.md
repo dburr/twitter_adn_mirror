@@ -40,6 +40,10 @@ and [App.net][APPDOTNETDEV].  In the case of Twitter, this is free; however
 with App.net you will need to pay for a developer account, which costs
 $100/year.
 
+This script needs to run continuously, so you might want to consider
+running it under a terminal multiplexer that supports detached sessions
+such as [screen][SCREEN] or [tmux][TMUX].
+
 ### Setup
 
 Once those are installed, take a look at config.sample, copy it and
@@ -74,3 +78,5 @@ This work is licensed under the [MIT License](LICENSE).
 [PYTHON]: http://www.python.org "Python"
 [SIMPLEJSON]: https://github.com/simplejson/simplejson "SimpleJSON"
 [TWITTER-RSS-DEPRECATED]: https://dev.twitter.com/docs/deprecations/spring-2012 "Twitter RSS deprecated"
+[SCREEN]: http://www.gnu.org/software/screen/ "Screen"
+[TMUX]: http://tmux.sourceforge.net "tmux"
