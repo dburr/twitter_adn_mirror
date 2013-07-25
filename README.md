@@ -1,15 +1,14 @@
 # Twitter to App.net Crossposter
-### by Donald Burr <dburr@borg-cube.com>
+##### by Donald Burr <dburr@borg-cube.com>
 
-## Purpose
+**Note this readme is still a work in progress**
 
-
-
+### Purpose
 
 I simply don't have [over 9,000 hours in the day][OVER9000] to manage all these
 social networks, nor do I have the patience to do so.
 
-## Prerequisites
+### Prerequisites
 
 In order to use this script, you will need to install the following
 Python modules, as well as their prerequisites.  Consult their Github
@@ -18,7 +17,7 @@ pages for instructions on how to do so.
 * [Python-Twitter][PYTHON-TWITTER]
 * [Python App.net API Wrapper][PYTHON-APPDOTNET]
 
-## Setup
+### Setup
 
 Once those are installed, take a look at config.sample, copy it and
 edit, then get your Twitter and App.net API keys.
