@@ -80,6 +80,8 @@ Finally, run the script with:
 
 `python mirror.py -c *config-file*`
 
+Some other command-line arguments include:
+
 ```
 Usage: mirror [-c | --config=configuration file (default: `mirror.cfg')]
               [-i | --poll-interval=period in secs between polls (default=300)
@@ -90,21 +92,32 @@ Usage: mirror [-c | --config=configuration file (default: `mirror.cfg')]
               [-n | --simulation-mode]
 ```
 
+Note that if an option is specified both in the configuration file as well
+as a command-line argument, the command-line argument takes precedence.
 
 ### Future Plans
 
 Some ideas for features/enhancements that I will try and implement.
 
-* Option to crosspost @mentions if there is a user with the same name
-  on App.net
+* Option to crosspost @mentions if the user being @mentioned also has
+  an account on App.net
 * Mechanism to filter posts, that is, to prevent crossposting of posts
   that match certain criteria (regexp, client name, etc.)  This can be
   used to, e.g. not crosspost auto-posts from checkin services
   (e.g. Foursquare).
 
+If you have any ideas for additinoal features or enhancements,
+please feel free to [open an issue on Github][GHISSUES].
+Or better yet, [fork this repo][GHFORK], add the feature/make the change,
+and submit a pull request.
+
 ### About the Author
 
 ### Like what you see?
+
+Unfortunately with the economy being the way it is, finding work has been
+rather difficult, so if you like what you see here and are able to, a small
+donation would be greatly appreciated.
 
 [![Donate via PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=U4T93T9ZJNHM6)
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=dburr&url=https://github.com/dburr/twitter_adn_mirror&title=twitter_adn_mirror&language=python&tags=github&category=software)
@@ -128,3 +141,5 @@ This work is licensed under the [MIT License](LICENSE).
 [TWITTER-RSS-DEPRECATED]: https://dev.twitter.com/docs/deprecations/spring-2012 "Twitter RSS deprecated"
 [SCREEN]: http://www.gnu.org/software/screen/ "Screen"
 [TMUX]: http://tmux.sourceforge.net "tmux"
+[GHISSUES]: https://github.com/dburr/twitter_adn_mirror/issues "Github Issues"
+[GHFORK]: https://help.github.com/articles/fork-a-repo "Fork"
