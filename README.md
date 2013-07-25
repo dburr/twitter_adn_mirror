@@ -102,6 +102,11 @@ Some ideas for features/enhancements that I will try and implement.
   used to, e.g. not crosspost auto-posts from checkin services
   (e.g. Foursquare).
 
+### About the Author
+
+### Like what you see?
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=dburr&url=https://github.com/dburr/twitter_adn_mirror&title=twitter_adn_mirror&language=python&tags=github&category=software)
 
 ### License
 
