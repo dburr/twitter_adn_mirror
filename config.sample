@@ -1,0 +1,18 @@
+[twitter]
+consumer_key = YOUR-TWITTER-CONSUMER-KEY
+consumer_secret = YOUR-TWITTER-CONSUMER-SECRET
+access_token_key = YOUR-TWITTER-ACCESS-TOKEN-KEY
+access_token_secret = YOUR-TWITTER-ACCESS-TOKEN-SECRET
+user_to_mirror = YOUR-TWITTER-USERNAME
+
+[appdotnet]
+client_id = YOUR-APP.NET-CLIENT-ID
+client_secret = YOUR-APP.NET-CLIENT-SECRET
+callback_url = YOUR-APP.NET-CALLBACK-URL
+access_token =
+
+[other]
+poll_interval = 600             # in seconds
+mirror_mentions = True
+mirror_indirect_mentions = True
+mirror_retweets = True
