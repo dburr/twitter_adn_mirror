@@ -99,6 +99,11 @@ def getHMS(s):
 
 ###############################################################################
 
+def str2bool(v):
+  return v.lower() in ("yes", "true", "t", "1")
+
+###############################################################################
+
 def read_config(config_file):
   global TWITTER_CONSUMER_KEY
   global TWITTER_CONSUMER_SECRET
@@ -142,8 +147,17 @@ def read_config(config_file):
     APP_NET_ACCESS_TOKEN = app_net_credentials.get("access_token", "")
 
     mirror_mentions = other_prefs.get("mirror_mentions", mirror_mentions)
+    if isinstance(mirror_mentions, basestring):
+      mirror_mentions = str2bool(mirror_mentions)
+
     mirror_indirect_mentions = other_prefs.get("mirror_indirect_mentions", mirror_indirect_mentions)
+    if isinstance(mirror_indirect_mentions, basestring):
+      mirror_indirect_mentions = str2bool(mirror_indirect_mentions)
+
     mirror_retweets = other_prefs.get("mirror_retweets", mirror_retweets)
+    if isinstance(mirror_retweets, basestring):
+      mirror_retweets = str2bool(mirror_retweets)
+
     poll_interval = other_prefs.get("poll_interval", poll_interval)
     if isinstance(poll_interval, basestring):
       poll_interval = int(poll_interval)
@@ -255,6 +269,7 @@ def run(sc):
   global twitter_api
   global app_net_api
   global mirror_mentions
+  global mirror_indirect_mentions
   global mirror_retweets
   global user_to_mirror
   global simulation_mode
