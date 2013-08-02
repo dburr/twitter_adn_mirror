@@ -14,7 +14,7 @@ Note: command-line arguments take precedence, followed by config files.
 """
 
 # Twitter to App.net Crossposter
-# twitter_adn_mirror Version 1.0, released 07/25/2013
+# twitter_adn_mirror Version 1.0.1, released 08/02/2013
 # Copyright (c) 2013 Donald Burr
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,7 +48,7 @@ import getopt
 from ConfigParser import SafeConfigParser
 from appdotnet import *
 
-version_string = "twitter_adn_mirror Version 1.0, released 07/25/2013"
+version_string = "twitter_adn_mirror Version 1.0.1, released 08/02/2013"
 config_file = "mirror.cfg"
 poll_interval = 300
 last_run_time = time.time()
