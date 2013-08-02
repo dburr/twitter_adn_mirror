@@ -1,6 +1,16 @@
 # Twitter to App.net Crossposter
-##### Version 1.0
+##### Version 1.0.1, released 08/02/2013
 ##### by Donald Burr <dburr@borg-cube.com>
+
+### ChangeLog
+
+##### Version 1.0.1, released 08/02/2013
+
+* Fix handling of boolean values read from config files
+
+##### Version 1.0.0, released 07/25/2013
+
+* Initial release
 
 ### Purpose
 
